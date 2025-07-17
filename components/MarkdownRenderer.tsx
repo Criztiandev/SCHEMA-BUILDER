@@ -56,12 +56,12 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
                 elements.push(
                     <div key={currentIndex++} className="my-6">
                         {language && (
-                            <div className="bg-muted/50 px-3 py-1 text-xs font-mono text-muted-foreground border-b border-border rounded-t-lg">
+                            <div className="bg-card/50 px-3 py-1 text-xs font-mono text-muted-foreground border-b border-border rounded-t-lg">
                                 {language}
                             </div>
                         )}
-                        <pre className={`bg-slate-900 dark:bg-slate-800 p-4 overflow-x-auto ${language ? 'rounded-b-lg' : 'rounded-lg'} border border-border`}>
-                            <code className="text-sm font-mono text-slate-100 dark:text-slate-200">
+                        <pre className={`bg-card border border-border p-4 overflow-x-auto ${language ? 'rounded-b-lg' : 'rounded-lg'}`}>
+                            <code className="text-sm font-mono text-foreground">
                                 {codeLines.join('\n')}
                             </code>
                         </pre>
