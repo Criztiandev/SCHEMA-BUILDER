@@ -117,14 +117,14 @@ export default function Home() {
                   value="json"
                   className="data-[state=active]:bg-background/60  transition-all duration-200"
                 >
-                  Code Editor
+                  Schema Editor
                 </TabsTrigger>
-                <TabsTrigger
+                {/* <TabsTrigger
                   value="builder"
                   className="data-[state=active]:bg-background/60  transition-all duration-200"
                 >
                   Form Builder
-                </TabsTrigger>
+                </TabsTrigger> */}
               </TabsList>
 
               <TabsContent value="json" className="space-y-6">
