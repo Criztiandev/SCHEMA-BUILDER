@@ -26,7 +26,7 @@ const Header = ({ format, handleFormatChange }: HeaderProps) => {
           </div>
           <h1 className="text-2xl font-bold ">Schema Builder</h1>
           <Badge variant="secondary" className="">
-            v2.0
+            v1.0
           </Badge>
         </div>
 
@@ -38,7 +38,7 @@ const Header = ({ format, handleFormatChange }: HeaderProps) => {
               Documentation
             </Button>
           </Link>
-          
+
           <div className="flex items-center gap-3">
             <span className="text-sm ">Database Format:</span>
             <Select value={format} onValueChange={handleFormatChange}>
