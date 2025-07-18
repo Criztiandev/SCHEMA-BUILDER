@@ -112,7 +112,7 @@ export default function Home() {
                 setActiveTab(value as "json" | "builder")
               }
             >
-              <TabsList className="grid w-full grid-cols-2  mb-8 p-1">
+              <TabsList className="grid w-full grid-cols-1  mb-8 p-1">
                 <TabsTrigger
                   value="json"
                   className="data-[state=active]:bg-background/60  transition-all duration-200"
