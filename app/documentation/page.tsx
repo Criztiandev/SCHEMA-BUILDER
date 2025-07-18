@@ -61,100 +61,7 @@ Schema Builder is a modern web application that helps developers create database
 
 - Check the Troubleshooting Guide for common issues
 - Review Examples for inspiration
-- Open an issue on GitHub for bugs or feature requests`
-  },
-  {
-    id: "getting-started",
-    title: "Getting Started",
-    icon: PlayCircle,
-    content: `# Getting Started
-
-This guide will help you set up and run the Schema Builder application on your local machine.
-
-## Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-- **Node.js**: Version 18.0 or higher
-- **npm**: Usually comes with Node.js (or yarn as an alternative)
-- **Git**: For cloning the repository
-
-### Checking Your Environment
-
-Verify your installations:
-
-\`\`\`bash
-node --version  # Should be 18.0+
-npm --version   # Should be 8.0+
-git --version   # Any recent version
-\`\`\`
-
-## Installation
-
-### 1. Clone the Repository
-
-\`\`\`bash
-git clone <repository-url>
-cd schema-builder
-\`\`\`
-
-### 2. Install Dependencies
-
-\`\`\`bash
-npm install
-\`\`\`
-
-This will install all required packages including:
-- Next.js framework
-- React and React DOM
-- TypeScript
-- Tailwind CSS
-- Radix UI components
-- Monaco Editor
-- Zod validation library
-
-### 3. Start Development Server
-
-\`\`\`bash
-npm run dev
-\`\`\`
-
-The application will start on \`http://localhost:3000\`
-
-### 4. Verify Installation
-
-Open your browser and navigate to \`http://localhost:3000\`. You should see the Schema Builder interface with:
-- A header with format selection (NoSQL/SQL)
-- Two tabs: "Code Editor" and "Form Builder"
-- An output panel on the right showing generated code
-
-## Development Scripts
-
-The project includes several npm scripts for development:
-
-\`\`\`bash
-# Start development server with hot reload
-npm run dev
-
-# Build the application for production
-npm run build
-
-# Start production server (after build)
-npm start
-
-# Run ESLint for code quality
-npm run lint
-\`\`\`
-
-## Next Steps
-
-Now that you have the application running:
-
-1. **Explore the Interface**: Try both the Form Builder and JSON Editor
-2. **Create a Simple Schema**: Start with a basic user schema
-3. **Review Generated Code**: See how your schema translates to code
-4. **Read the User Guide**: Learn about advanced features
-5. **Check Examples**: See common schema patterns`
+- Open an issue on GitHub for bugs or feature requests`,
   },
   {
     id: "user-guide",
@@ -286,7 +193,7 @@ export const UserSchema = z.object({
   age: z.number().min(0).max(120).optional(),
   isActive: z.boolean()
 });
-\`\`\``
+\`\`\``,
   },
   {
     id: "schema-format",
@@ -426,7 +333,7 @@ Each field in the schema has the following structure:
     }
   ]
 }
-\`\`\``
+\`\`\``,
   },
   {
     id: "code-generation",
@@ -551,7 +458,7 @@ CREATE TABLE users (
 
 -- Create indexes for unique fields
 CREATE UNIQUE INDEX idx_users_email ON users(email);
-\`\`\``
+\`\`\``,
   },
   {
     id: "api-reference",
@@ -659,7 +566,7 @@ interface SchemaInputProps {
   useSmartDefaults: boolean;
   onSmartDefaultsChange: (enabled: boolean) => void;
 }
-\`\`\``
+\`\`\``,
   },
   {
     id: "examples",
@@ -876,7 +783,7 @@ export function UserForm() {
     </form>
   );
 }
-\`\`\``
+\`\`\``,
   },
   {
     id: "troubleshooting",
@@ -1060,8 +967,8 @@ When reporting issues, include:
 - Check field names are valid JavaScript identifiers
 
 **"Invalid field type"**
-- Verify field type is one of: string, number, boolean, date, array, object`
-  }
+- Verify field type is one of: string, number, boolean, date, array, object`,
+  },
 ];
 
 export default function DocumentationPage() {
@@ -1096,7 +1003,9 @@ export default function DocumentationPage() {
                   return (
                     <Button
                       key={section.id}
-                      variant={activeSection === section.id ? "default" : "ghost"}
+                      variant={
+                        activeSection === section.id ? "default" : "ghost"
+                      }
                       className="w-full justify-start text-left"
                       onClick={() => setActiveSection(section.id)}
                     >
